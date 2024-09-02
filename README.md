@@ -1,4 +1,4 @@
-# AI CHATBOT API
+# AI Chatbot API
 
 ## Usage Instructions
 
@@ -14,22 +14,22 @@ To use the ChatBot API Server, follow these instructions:
 
    Open the ChatBot API Server folder in VS Code and run the following command in the VS Code terminal to install all necessary packages:
 
-`npm install cors dotenv colors express openai readline-sync`
+   `npm install cors dotenv colors express openai readline-sync`
 
 2. After the installation is complete, start the server by running the following command:
 
-`npm start`
+   `npm start`
 
-This will start the server on port 3000. For example, the server will be accessible at http://localhost:3000/.
+   This will start the server on port 3000. For example, the server will be accessible at http://localhost:3000/.
 
 3. Interact with the chatbot using the following URL:
-- Example: http://localhost:3000/chat
+   - Example: http://localhost:3000/chat
 
 Send a POST request with the message to the chatbot in the following format:
 
-`{
-"message": "what is Science"
-}`
+   `{
+   "message": "what is Science"
+   }`
 
 4. Receive the chatbot's response in the following format:
 
