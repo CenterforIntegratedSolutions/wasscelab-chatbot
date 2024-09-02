@@ -25,7 +25,7 @@ To use the ChatBot API Server, follow these instructions:
 3. Interact with the chatbot using the following URL:
    - Example: http://localhost:3000/chat
 
-Send a POST request with the message to the chatbot in the following format:
+   Send a POST request with the message to the chatbot in the following format:
 
    `{
    "message": "what is Science"
@@ -33,9 +33,9 @@ Send a POST request with the message to the chatbot in the following format:
 
 4. Receive the chatbot's response in the following format:
 
-`{
-"chatHistory": {
-"user": "what is Science",
-"wasscelab_assistant": "Science is a systematic study of the structure and behavior of the physical and natural world through observation and experimentation. It seeks to understand and explain the underlying principles that govern the universe, from the smallest particles to the largest galaxies. Science encompasses various fields such as biology, chemistry, physics, astronomy, and geology, among others. It is a way of exploring and discovering the world around us while maintaining a commitment to objectivity, evidence-based reasoning, and the pursuit of truth."
-}
-}`
+   `{
+   "chatHistory": {
+   "user": "what is Science",
+   "wasscelab_assistant": "Science is a systematic study of the structure and behavior of the physical and natural world through observation and experimentation. It seeks to understand and explain the underlying principles that govern the universe, from the smallest particles to the largest galaxies. Science encompasses various fields such as biology, chemistry, physics, astronomy, and geology, among others. It is a way of exploring and discovering the world around us while maintaining a commitment to objectivity, evidence-based reasoning, and the pursuit of truth."
+   }
+   }`
