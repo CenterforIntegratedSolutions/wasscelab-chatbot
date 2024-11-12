@@ -13,6 +13,7 @@ app.use(cors());
 // Route to interact with the chatbot
 app.post('/chatbot', async (req, res) => {
 
+  console.log("req:", req)
   // Extract the user's message and userId from the request body
   const { message: userInputData, userId } = req.body;
 
