@@ -20,14 +20,8 @@ async function chatbot(userInputData, userId) {
         // System message to define behavior
         const systemMessage = {
             role: 'system',
-            content: `You are assisting a student in understanding their exam question and provide essay, especially why an answer is correct or incorrect and provide simplify essay question, if ask. Focus only on the specific question being asked. Avoid discussing topics outside of this question. If the user's question deviates from the exam content, politely remind them to stay on topic.
-            
-            If the provided "correct answer" appears to be incorrect or doesn't logically match the question, politely flag it by stating: "Note: The provided correct answer may not be accurate. Please report it."
-            
-            Then proceed to give your best explanation based on curriculum logic. Keep your feedback concise (under 100 words)`
+            content: `You are assisting the student with understanding the current exam problem. Focus only on the specific question being asked. Avoid discussing topics outside of this question. If the user's question deviates from the exam content, politely remind them to stay on topic.`
         };
-
-
 
         // Add system message at the start of the messages array
         const messages = [systemMessage, ...chatHistory];
@@ -36,14 +30,7 @@ async function chatbot(userInputData, userId) {
         let userContent;
 
         if (userInputData.initializer == 1) {
-            userContent = `As the WASSCElab Assistant, your task is to help the me understand my exam question. Analyze the description, the question, the selected option, and the correct answer. Explain whether the I was right or wrong, and why. Keep your explanation clear and short (under 100 words), aligned with the WAEC curriculum, and encouraging. If the user's question deviates from the question content, avoid answering and politely remind them to stay on topic.
-            Description: ${userInputData.description}
-            Question: ${userInputData.question}
-            Selected Answer: ${userInputData.selected}
-            Correct Answer: ${userInputData.correct}`;
-
-
-
+            userContent = `As the '${chatBoxName},' you are to assist students with understanding how well they are doing on their exams. Please look at the questions, answer and user selected option and help them understand why their answer is incorrect or correct. Ensure your responses are concise, under 100 words, drawing from the curriculum and kindly gather more details. Here's the question: ${userInputData.question}. Here is the user's selected option: ${userInputData.selected}, and here is the correct option: ${userInputData.correct}.`;
             // Clear user's chat history for new questions
             userChatHistories[userId] = [];
         } else {

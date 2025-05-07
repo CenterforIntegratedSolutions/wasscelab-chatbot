@@ -20,7 +20,7 @@ app.post('/chatbot', async (req, res) => {
     return res.status(400).json({ error: 'User ID is required.' });
   }
 
-  console.log(`Chatbot Initiated by User ${userId}: ${userInputData?.question || 'No question provided'}`);
+  console.log(`User Response: ${userId} | ${userInputData?.description} | ${userInputData?.question}`);
 
   try {
     // Call the chatbot function with the user's input and userId
@@ -29,6 +29,7 @@ app.post('/chatbot', async (req, res) => {
     // Respond with the updated chat history
     res.json({ success: true, data: response });
   } catch (error) {
+
     // If an error occurs, respond with a 500 status code and the error message
     console.error('Error in chatbot:', error);
     res.status(500).json({ success: false, error: error.message });
